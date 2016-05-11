@@ -1,0 +1,8 @@
+function [ net ] = reinforcementNeuralNet( netsize, str, car, numsteps )
+%netsize - vector of layer sizes including input and output
+%addpath('+mse');
+net = fitnet(netsize);
+net.performParam.str = str;
+net.performParam.str = str;
+net.performParam.str = str;
+end

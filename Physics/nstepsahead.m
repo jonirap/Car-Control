@@ -1,4 +1,4 @@
-function [ score ] = nstepsahead( str, car, getrealityscore, getreality, updatereality, net, numsteps )
+function [ score, i ] = nstepsahead( str, car, net, numsteps )
 score = getrealityscore(str, car);
 for i=1:numsteps
     [str, canContinue] = updatereality(str, car, net(getreality(car)));
@@ -8,4 +8,3 @@ for i=1:numsteps
 end
 score = getrealityscore(str, car) - score;
 end
-
